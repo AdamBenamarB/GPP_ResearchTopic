@@ -1,0 +1,2 @@
+Click on the grid to place an agent and click somewhere else on the grid to set its destination.
+Do this as many times as you want and press space to start the pathfinding.
