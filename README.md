@@ -40,12 +40,7 @@ This demo was implemented using Unity with C#.
 
 #### Internal Structure
 
-The agent is formed by a deep neural network, with variable number of layers, neurons per layer, activation functions, loss function, optimizer, etc. By default, it was chosen a neural network with 2 hidden layers (32 neurons each); the activations `ReLu` for the inner layers and the `Linear` for the last one; `Mean Squared Error` as the loss function; `Adam` as the optimizer; `Epsilon` (exploration) starting at 1 and ending at 0, when the number of episodes reaches 75%; `Discount` at 0.95 (significance given to the future rewards, instead of the immediate ones).
-
-#### Training
-
-For the training, the replay queue had size 20000, with a random sample of 512 selected for training each episode, using 1 epoch.
-
+Each agent has its own list of Vectors which make a path, everytime we check for collisions the path lists of each agent gets compared to all the other agents path lists, a collision happens when a two path segments(consisting of 2 Vectors), the same amount of steps from their startpoint intersect eachother. That intersection gets stored in a list of vectors of points to avoid in the next path calculation.
 
 #### Requirements
 
